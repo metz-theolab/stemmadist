@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stemmadist"
+version = "0.0.0"
+dependencies = [
+
+]
+requires-python = ">=3.9"
+authors = [
+  {name = "Sophie Robert-Hayek", email = "sophie.robert@univ-lorraine.fr"},
+]
+maintainers = [
+  {name = "Sophie Robert-Hayek", email = "sophie.robert@univ-lorraine.fr"},
+]
+description = "Library to compute the distance between trees"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["tree", "distance", "phylogeny", "stemmatology"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+gui = []
+cli = [
+
+]
