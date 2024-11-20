@@ -1,0 +1,22 @@
+Begin paup;
+set autoclose=yes;
+
+execute /Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/nex/parzival.nex;
+Set criterion=parsimony;
+hsearch mulTrees=no;
+savetrees file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/parsi.tre replace format=Newick root=yes;
+bootstrap nreps=100;
+savetrees from=1 to=1 file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/bs_parsi.tre replace brlens=no format=Newick root=yes;
+set criterion=distance;
+nj;
+savetrees file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/nj.tre replace format=Newick root=yes;
+bootstrap nreps=100;
+savetrees from=1 to=1 file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/bs_nj.tre replace brlens=no format=Newick root=yes;
+set criterion=likelihood;
+lscore;
+savetrees file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/ls.tre replace format=Newick root=yes;
+bootstrap nreps=100;
+savetrees from=1 to=1 file=/Users/sophrobhayek/Documents/dev/stemmadist/paper/results/parzival/paup_trees/bs_ls.tre replace brlens=no format=Newick root=yes;
+
+end;
+
